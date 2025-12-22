@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 // this is to allow the test to assert than the client for the quote can be changed
 
 test('should be able to edit a quote', async ({ page }, testInfo) => {
-  await page.goto('/');
+  await page.goto('/login');
 
   // click the sign in button
   const signInWithEmailButton = page.getByRole('button', { name: 'Sign in with Email' });

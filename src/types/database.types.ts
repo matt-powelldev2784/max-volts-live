@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
+    PostgrestVersion: "14.1"
   }
   public: {
     Tables: {
@@ -21,10 +21,10 @@ export type Database = {
           city: string | null
           company: string | null
           county: string | null
-          created_at: string | null
+          created_at: string
           email: string | null
           id: number
-          is_visible_to_user: boolean
+          is_visible_to_user: boolean | null
           legacy_id: string | null
           name: string
           post_code: string | null
@@ -36,10 +36,10 @@ export type Database = {
           city?: string | null
           company?: string | null
           county?: string | null
-          created_at?: string | null
+          created_at?: string
           email?: string | null
           id?: number
-          is_visible_to_user?: boolean
+          is_visible_to_user?: boolean | null
           legacy_id?: string | null
           name: string
           post_code?: string | null
@@ -51,10 +51,10 @@ export type Database = {
           city?: string | null
           company?: string | null
           county?: string | null
-          created_at?: string | null
+          created_at?: string
           email?: string | null
           id?: number
-          is_visible_to_user?: boolean
+          is_visible_to_user?: boolean | null
           legacy_id?: string | null
           name?: string
           post_code?: string | null
@@ -65,7 +65,7 @@ export type Database = {
       invoice: {
         Row: {
           client_id: number
-          created_at: string | null
+          created_at: string
           date: string | null
           id: number
           legacy_id: string | null
@@ -80,7 +80,7 @@ export type Database = {
         }
         Insert: {
           client_id: number
-          created_at?: string | null
+          created_at?: string
           date?: string | null
           id?: number
           legacy_id?: string | null
@@ -95,7 +95,7 @@ export type Database = {
         }
         Update: {
           client_id?: number
-          created_at?: string | null
+          created_at?: string
           date?: string | null
           id?: number
           legacy_id?: string | null
@@ -189,7 +189,7 @@ export type Database = {
       }
       product: {
         Row: {
-          created_at: string | null
+          created_at: string
           description: string | null
           id: number
           is_visible_to_user: boolean
@@ -200,7 +200,7 @@ export type Database = {
           vat: number
         }
         Insert: {
-          created_at?: string | null
+          created_at?: string
           description?: string | null
           id?: number
           is_visible_to_user?: boolean
@@ -211,7 +211,7 @@ export type Database = {
           vat?: number
         }
         Update: {
-          created_at?: string | null
+          created_at?: string
           description?: string | null
           id?: number
           is_visible_to_user?: boolean
@@ -226,7 +226,7 @@ export type Database = {
       quote: {
         Row: {
           client_id: number
-          created_at: string | null
+          created_at: string
           date: string | null
           id: number
           invoice_id: number | null
@@ -241,7 +241,7 @@ export type Database = {
         }
         Insert: {
           client_id: number
-          created_at?: string | null
+          created_at?: string
           date?: string | null
           id?: number
           invoice_id?: number | null
@@ -256,7 +256,7 @@ export type Database = {
         }
         Update: {
           client_id?: number
-          created_at?: string | null
+          created_at?: string
           date?: string | null
           id?: number
           invoice_id?: number | null

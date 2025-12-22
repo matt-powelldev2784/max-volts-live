@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('should be able to sign in with email and password', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/login');
 
   // click the sign in button
   const signInWithEmailButton = page.getByRole('button', { name: 'Sign in with Email' });

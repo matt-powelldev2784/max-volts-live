@@ -14,7 +14,7 @@
     "test:run": "vitest run",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "update:types": "npx supabase gen types typescript --project-id djladasdtsrswxsvjtcw --schema public > src/types/database.types.ts",
+    "update:types": "npx supabase gen types typescript --project-id nwdolfowqhhelcbpmoks --schema public > src/types/database.types.ts",
     "tsc": "npx tsc -p tsconfig.app.json --noEmit",
     "db:clean": "npx ts-node src/db/deleteTestRecords.ts",
     "db:seed": "npx ts-node src/db/seedDatabase.ts",

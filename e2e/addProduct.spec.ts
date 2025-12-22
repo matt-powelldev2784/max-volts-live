@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('should be able to add a product', async ({ page }, testInfo) => {
-  await page.goto('/');
+  await page.goto('/login');
 
   // click the sign in button
   const signInWithEmailButton = page.getByRole('button', { name: 'Sign in with Email' });

@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 // this is to allow the test to assert than an actual quote is created for the new client
 
 test('should be able to add a quote', async ({ page }, testInfo) => {
-  await page.goto('/');
+  await page.goto('/login');
 
   // click the sign in button
   const signInWithEmailButton = page.getByRole('button', { name: 'Sign in with Email' });
