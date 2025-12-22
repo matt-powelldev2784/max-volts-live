@@ -8,7 +8,7 @@ import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { slideImages } from './slideData';
 import { Button } from '@/ui/button';
-import toolsFan from '@/assets/tools_fan.png';
+import toolsFan from '@/assets/tools_fan.webp';
 import springSvg from '@/assets/spring.svg';
 import { servicesData } from './servicesData';
 import { LinkButton } from '@/ui/button';
@@ -153,7 +153,7 @@ interface CardItemProps {
 
 const CardItem = ({ title, text, image }: CardItemProps) => (
   <article className="w-fit h-auto max-w-[700px] md:max-w-[800px] mx-auto flex flex-col md:flex-row lg:flex-col md:gap-8 overflow-hidden">
-    <div className="relative rounded-3xl overflow-hidden w-full md:max-w-[350px] lg:max-h-[400px] z-20">
+    <div className="relative rounded-3xl overflow-hidden w-full max-h-[250px] md:max-h-[350px] md:max-w-[350px] lg:max-h-[400px] z-20">
       <img src={image} alt="Electrical image" className="object-cover" />
     </div>
 
