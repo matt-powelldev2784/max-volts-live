@@ -19,8 +19,8 @@ const Login = () => {
     <div className="flex min-h-screen items-start justify-center bg-gray-50 p-4">
       <Card className="w-full max-w-[400px] border-2 border-gray-200 shadow-lg">
         {currentView === 'main' && <MainView setCurrentView={setCurrentView} />}
-        {currentView === 'signInWithEmail' && <SignInWithEmail setCurrentView={setCurrentView} />}
-        {currentView === 'signUpWithEmail' && <SignUpWithEmail setCurrentView={setCurrentView} />}
+        {/* {currentView === 'signInWithEmail' && <SignInWithEmail setCurrentView={setCurrentView} />}
+        {currentView === 'signUpWithEmail' && <SignUpWithEmail setCurrentView={setCurrentView} />} */}
       </Card>
     </div>
   );
@@ -67,24 +67,24 @@ const MainView = ({ setCurrentView }: MainViewProps) => {
 
       <CardDescription className="px-4 text-center">Welcome to Max Volts Dashboard</CardDescription>
 
-      <p className="px-6 pt-4 text-center text-gray-600">
+      {/* <p className="px-6 pt-4 text-center text-gray-600">
         To demo this project, click the <span className="font-bold text-mv-orange cursor-pointer">Demo Sign In</span>{' '}
         button. This will use a demo account.
-      </p>
+      </p> */}
 
       <CardContent className="space-y-4 px-6 pb-6 pt-4">
         {/* Demo Sign In Button */}
-        <Button
+        {/* <Button
           className="w-full bg-mv-orange text-white font-semibold"
           size="lg"
           onClick={handleDemoSignIn}
           isLoading={isLoading}
         >
           Demo Sign In
-        </Button>
+        </Button> */}
 
         {/* Email Sign In Button */}
-        <Button
+        {/* <Button
           className="w-full border-2 border-gray-300 bg-white text-gray-900 font-semibold"
           size="lg"
           onClick={() => setCurrentView('signInWithEmail')}
@@ -92,11 +92,11 @@ const MainView = ({ setCurrentView }: MainViewProps) => {
         >
           <Mail className="mr-2 h-5 w-5" />
           Sign in with Email
-        </Button>
+        </Button> */}
 
         {/* Google Sign In Button */}
         <Button
-          className="w-full border-2 border-gray-300 bg-white text-gray-900 font-semibold"
+          className="w-full border-2 border-gray-300 bg-white text-gray-900 font-semibold mt-8"
           size="lg"
           onClick={handleGoogleSignIn}
           isLoading={isLoading}
@@ -106,7 +106,7 @@ const MainView = ({ setCurrentView }: MainViewProps) => {
         </Button>
 
         {/* Create Account Link */}
-        <p className="text-center text-sm text-gray-600 pt-4">
+        {/* <p className="text-center text-sm text-gray-600 pt-4">
           Don't have an account?{' '}
           <button
             className="font-bold text-mv-orange cursor-pointer hover:underline"
@@ -114,7 +114,7 @@ const MainView = ({ setCurrentView }: MainViewProps) => {
           >
             Create one
           </button>
-        </p>
+        </p> */}
       </CardContent>
     </>
   );
