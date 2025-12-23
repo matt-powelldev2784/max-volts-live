@@ -29,7 +29,7 @@ const Login = () => {
         <CardContent className="space-y-4 px-6 pb-6 pt-4">
           {/* Google Sign In Button */}
           <Button
-            className="w-full border-2 border-gray-300 bg-white text-gray-900 font-semibold mt-8"
+            className="w-full border-2 border-gray-300 bg-white text-gray-900 font-semibold mt-8 py-5"
             size="lg"
             onClick={handleGoogleSignIn}
             isLoading={isLoading}
