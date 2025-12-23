@@ -18,7 +18,7 @@ const CreateInvoice = ({ quoteId, invoiceId, clientId }: CreateInvoiceProps) => 
     mutationFn: convertQuoteToInvoice,
     onSuccess: ({ invoiceId, clientId }) => {
       queryClient.invalidateQueries({ queryKey: ['invoices'] });
-      navigate(`/edit/invoice?invoiceId=${invoiceId}&clientId=${clientId}`);
+      navigate(`/view-invoices?invoiceId=${invoiceId}&clientId=${clientId}`);
     },
   });
 
