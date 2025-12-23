@@ -25,7 +25,7 @@ const getProductById = async (productId: number) => {
 };
 
 const deleteProduct = async (productId: number) => {
-  const { data, error } = await supabase.from('product').delete().eq('id', productId);
+  const { data, error } = await supabase.from('product').update({ is_visible_to_user: false }).eq('id', productId);
   if (error) throw new Error('Server Error. Product deletion failed. Please try again later.');
   return data;
 };

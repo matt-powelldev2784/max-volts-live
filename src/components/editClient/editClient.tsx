@@ -36,7 +36,7 @@ const getClientById = async (clientId: number) => {
 };
 
 const deleteClient = async (clientId: number) => {
-  const { data, error } = await supabase.from('client').delete().eq('id', clientId);
+  const { data, error } = await supabase.from('client').update({ is_visible_to_user: false }).eq('id', clientId);
   if (error) throw new Error('Server Error. Client deletion failed. Please try again later.');
   return data;
 };
