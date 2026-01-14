@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@//ui
 import { Button } from '@//ui/button';
 import maxVoltsIcon from '@/assets/max_volts_icon.svg';
 import googleGIcon from '@/assets/google_g_logo.svg';
+import { Loader2 } from 'lucide-react';
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -32,10 +33,15 @@ const Login = () => {
             className="w-full border-2 border-gray-300 bg-white text-gray-900 font-semibold mt-8 py-5"
             size="lg"
             onClick={handleGoogleSignIn}
-            isLoading={isLoading}
           >
-            <img src={googleGIcon} alt="Google Icon" className="h-6" />
-            Sign in with Google
+            {isLoading ? (
+              <Loader2 className="animate-spin text-mv-orange h-6" />
+            ) : (
+              <>
+                <img src={googleGIcon} alt="Google Icon" className="h-6" />
+                Sign in with Google
+              </>
+            )}
           </Button>
         </CardContent>
       </Card>
