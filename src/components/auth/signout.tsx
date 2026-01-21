@@ -14,15 +14,14 @@ const SignOut = () => {
 
   const handleSignOut = async () => {
     setIsLoading(true);
-    const { error } = await supabase.auth.signOut();
+    const { error } = await supabase.auth.signOut({ scope: 'local' });
 
-    if (error) {
+    if (error && error.code !== 'session_not_found') {
       console.error('Sign out error:', error);
-      setIsLoading(false);
-      return;
     }
 
-    return navigate('/login', { replace: true });
+    setIsLoading(false);
+    navigate('/login', { replace: true });
   };
 
   const handleCancel = () => {

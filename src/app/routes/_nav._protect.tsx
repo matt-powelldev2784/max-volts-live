@@ -1,6 +1,5 @@
-import Login from '@/components/auth/login';
 import useAuth from '@/lib/useAuth';
-import { Outlet } from 'react-router';
+import { Navigate, Outlet } from 'react-router';
 
 const ProtectedLayouts = () => {
   const { user, loading } = useAuth();
@@ -12,8 +11,8 @@ const ProtectedLayouts = () => {
   if (!user) {
     localStorage.clear();
     sessionStorage.clear();
-    
-    return <Login />;
+
+    return <Navigate to="/login" replace />;
   }
 
   return <Outlet />;
