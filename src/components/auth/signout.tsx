@@ -20,6 +20,8 @@ const SignOut = () => {
       console.error('Sign out error:', error);
     }
 
+    localStorage.clear();
+    sessionStorage.clear();
     setIsLoading(false);
     navigate('/login', { replace: true });
   };
