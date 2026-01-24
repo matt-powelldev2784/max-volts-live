@@ -13,7 +13,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#FFFFFF" />
-        <title>Max Volts SPA</title>
+        <title>Max Volts Electrical Services - Serving London And Surrey</title>
         <Meta />
         <Links />
       </head>
